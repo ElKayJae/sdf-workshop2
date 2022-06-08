@@ -84,11 +84,13 @@ public class BankAccount {
     //Methods 
 
     public float withdraw(String withdrawAmt){
-
+        //Float is a reference object
         Float withdrawAmtF =null;
 
         try {
             withdrawAmtF = Float.parseFloat(withdrawAmt);
+
+            //Float.floatvalue() to get primitive value of Float object
             if (withdrawAmtF.floatValue() <= 0) {
                 throw new IllegalArgumentException("Withdrawal cannot be negative or zero");
             }
